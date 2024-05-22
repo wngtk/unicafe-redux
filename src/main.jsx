@@ -13,10 +13,16 @@ const App = () => {
     })
   }
 
+  const ok = () => {
+    store.dispatch({
+      type: 'OK'
+    })
+  }
+
   return (
     <div>
       <button onClick={good}>good</button> 
-      <button>ok</button> 
+      <button onClick={ok}>ok</button>
       <button>bad</button>
       <button>reset stats</button>
       <div>good {store.getState().good}</div>
